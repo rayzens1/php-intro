@@ -3,5 +3,6 @@ version: 1
 deployment:
   tasks:
     - echo "Début du déploiement..."
-    - rsync -avz --exclude '.git*' --delete . /home/mlzdphgn/public_html/formation/php-intro/
+    - export DEPLOYPATH=/home/mlzdphgn/public_html/formation/php-intro/
+    - /bin/cp -R * $DEPLOYPATH
     - echo "Déploiement terminé."
