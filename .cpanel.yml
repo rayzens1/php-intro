@@ -1,0 +1,7 @@
+---
+version: 1
+deployment:
+  tasks:
+    - echo "Début du déploiement..."
+    - rsync -avz --exclude '.git*' --delete . /home/mlzdphgn/public_html/formation/php-intro/
+    - echo "Déploiement terminé."
